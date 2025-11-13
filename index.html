@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>POS Demo — Mobile POS Preview</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="logo">AR</div>
+      <div class="titleBlock">
+        <h1>POS Demo</h1>
+        <p class="tag">Simple Mobile POS for Roadside Hotels — Demo</p>
+      </div>
+      <div class="badge">Offline Demo</div>
+    </header>
+
+    <main class="layout">
+      <!-- LEFT: Menu -->
+      <section class="panel leftPanel card">
+        <div class="panelHeader">
+          <h2>Menu</h2>
+          <small class="muted"></small>
+        </div>
+        <div id="menuList" class="menu-list">
+          <!-- JS renders menu rows here -->
+        </div>
+      </section>
+
+      <!-- RIGHT: Cart & Summary -->
+      <aside class="panel rightPanel">
+        <div class="card cartCard">
+          <div class="panelHeader">
+            <h2>Cart</h2>
+          </div>
+
+          <div id="cartContainer">
+            <div id="emptyCart" class="empty">No items in cart — add from menu</div>
+            <div id="cartList" class="cart-list" style="display:none"></div>
+          </div>
+
+          <div class="subtotalRow">
+            <div class="muted">Total</div>
+            <div id="subtotal" class="totalAmt">₹0</div>
+          </div>
+
+          <div class="cartActions">
+            <button id="clearCartBtn" class="btn secondary">Clear</button>
+            <button id="printBtn" class="btn primary">Print Bill</button>
+          </div>
+        </div>
+
+        <div class="card summaryCard">
+          <h3>Sales Summary (Today)</h3>
+          <div class="summaryGrid" id="summaryGrid">
+            <!-- summary metrics -->
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">Demo Version — Designed by Arun</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+:root{
+  --bg1: #fff7f0;
+  --card: #ffffff;
+  --accent: #ff7a18;
+  --muted: #7b7b7b;
+  --shadow: 0 8px 24px rgba(18,18,18,0.06);
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg1),#ffffff);color:#111;-webkit-font-smoothing:antialiased}
+.app{max-width:1100px;margin:18px auto;padding:16px}
+
+/* Header */
+.header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#ffcba1,var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;box-shadow:var(--shadow)}
+.titleBlock h1{margin:0;font-size:20px}
+.tag{margin:0;color:var(--muted);font-size:13px}
+.badge{margin-left:auto;background:#fff4e6;color:var(--accent);padding:8px 10px;border-radius:12px;font-weight:700;font-size:13px}
+
+/* Layout */
+.layout{display:grid;grid-template-columns:1fr 380px;gap:14px}
+@media (max-width:900px){ .layout{grid-template-columns:1fr} .rightPanel{order:2} .leftPanel{order:1} }
+
+/* Cards */
+.card{background:var(--card);border-radius:12px;padding:12px;box-shadow:var(--shadow)}
+.panelHeader{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
+.muted{color:var(--muted);font-size:13px}
+
+/* Menu list (one row per item) */
+.menu-list{display:flex;flex-direction:column;gap:10px;max-height:70vh;overflow:auto;padding-right:6px}
+.menu-row{display:flex;align-items:center;gap:12px;padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,0.03);background:linear-gradient(180deg,#fff,#fffef9)}
+.thumb{width:72px;height:56px;border-radius:8px;overflow:hidden;flex:0 0 72px;background:#f6f6f6;display:flex;align-items:center;justify-content:center}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.info{flex:1;min-width:0}
+.name{font-weight:700;font-size:15px}
+.price{color:var(--muted);font-size:13px;margin-top:6px}
+
+/* qty controls */
+.controls{display:flex;align-items:center;gap:8px}
+.qtyBtn{width:36px;height:36px;border-radius:8px;border:0;background:#fff4e6;color:var(--accent);font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:18px}
+.qtyInput{width:68px;padding:8px;border-radius:8px;border:1px solid #eee;text-align:center;font-weight:700}
+.addBtn{margin-left:10px;padding:8px 12px;border-radius:10px;border:0;background:var(--accent);color:white;font-weight:700;cursor:pointer}
+
+/* Cart */
+.rightPanel .card{position:sticky;top:16px}
+.cart-list{display:flex;flex-direction:column;gap:8px;max-height:34vh;overflow:auto;padding-right:6px}
+.cart-row{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:8px;border-radius:8px;background:linear-gradient(180deg,#fff,#fffdf9)}
+.itemLeft{display:flex;flex-direction:column}
+.itemLeft .nm{font-weight:700}
+.itemLeft .meta{color:var(--muted);font-size:13px}
+.totalAmt{font-weight:800;font-size:20px}
+.subtotalRow{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+
+/* Actions */
+.cartActions{display:flex;gap:8px;margin-top:12px}
+.btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+.primary{background:var(--accent);color:white}
+.secondary{background:white;border:1px solid #eee}
+
+/* Summary */
+.summaryGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+@media (max-width:600px){ .summaryGrid{grid-template-columns:repeat(2,1fr)} }
+.stat{background:linear-gradient(180deg,#fff,#fffef7);padding:12px;border-radius:10px;text-align:center}
+.stat .num{font-weight:800;font-size:18px}
+.stat .lbl{color:var(--muted);font-size:13px;margin-top:8px}
+
+/* footer */
+.footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+/* small */
+.empty{color:var(--muted);text-align:center;padding:20px}
+.removeBtn{background:#fff;border:1px solid #eee;padding:6px 8px;border-radius:8px;cursor:pointer;font-size:13px}
+
+/* responsive touch targets */
+@media (max-width:480px){
+  .qtyInput{width:56px}
+  .thumb{width:64px;height:48px}
+}
